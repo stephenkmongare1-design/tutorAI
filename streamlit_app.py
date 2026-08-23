@@ -17,7 +17,7 @@ except Exception:
 
 # Reuse the existing database models and AI service.
 # The Flask app is only used to initialise SQLAlchemy/config; Streamlit is the UI.
-from extensions import db
+from extensions import py
 from models import (
     User, TeacherProfile, StudentProfile, Payment, Assignment,
     Submission, LiveClass, Recording, LibraryBook, TutorMessage,
