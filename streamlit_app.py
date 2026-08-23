@@ -17,13 +17,6 @@ except Exception:
 
 # Reuse the existing database models and AI service.
 # The Flask app is only used to initialise SQLAlchemy/config; Streamlit is the UI.
-from models import (
-    User, TeacherProfile, StudentProfile, Payment, Assignment,
-    Submission, LiveClass, Recording, LibraryBook, TutorMessage,
-)
-import ai_service
-
-
 st.set_page_config(
     page_title="TutorAI",
     page_icon="🎓",
