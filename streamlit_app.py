@@ -101,7 +101,7 @@ html, body, [class*="css"] {
 def init_app():
     os.makedirs( exist_ok=True)
     for folder in ("assignments", "submissions", "recordings", "library", "avatars"):
-        os.makedirs(os.path.join(UPLOAD_FOLDER, folder), exist_ok=True)
+        os.makedirs(os.path.join(folder), exist_ok=True)
     # create_app() already calls create_all(), but this is harmless and protects
     # against a Streamlit process starting after the DB file was removed.
     with flask_app.app_context():
@@ -721,7 +721,3 @@ def main():
         'TutorAI · Learn smarter. Teach better.</div>',
         unsafe_allow_html=True,
     )
-
-
-if __name__ == "__main__":
-    main
