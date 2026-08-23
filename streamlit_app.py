@@ -660,7 +660,7 @@ def student_live(user):
 
 def main(): main
 
-    if "user_id" not in st.session_state:
+if "user_id" not in st.session_state:
         render_login()
         return
 
