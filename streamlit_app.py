@@ -4,9 +4,8 @@ import uuid
 from datetime import datetime, timedelta, time
 
 import streamlit as st
-from werkzeug.utils import secure_filename
 
-# Streamlit Cloud exposes secrets through st.secrets. Copy simple secret values
+# Streamlit Cloud exposes secrets through st. secrets. Copy simple secret values
 # into the environment before importing config.py/app.py, because the existing
 # TutorAI configuration reads environment variables.
 try:
