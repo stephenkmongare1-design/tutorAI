@@ -659,7 +659,6 @@ def student_live(user):
 
 
 def main(): main
-    init_app
 
     if "user_id" not in st.session_state:
         render_login()
