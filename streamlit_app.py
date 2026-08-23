@@ -664,7 +664,7 @@ if "user_id" not in st.session_state:
         render_login()
         return
 
-    user = current_user()
+user = current_user()
 if not user:
         logout()
         return
