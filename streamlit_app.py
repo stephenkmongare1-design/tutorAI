@@ -669,7 +669,7 @@ if not user:
         logout()
         return
 
-    with st.sidebar:
+with st.sidebar:
         brand_sidebar()
         st.markdown(f"**{user['full_name']}**")
         st.markdown(f'<span class="pill">{user["role"].title()}</span>', unsafe_allow_html=True)
