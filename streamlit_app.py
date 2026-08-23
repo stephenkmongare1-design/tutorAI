@@ -665,7 +665,7 @@ if "user_id" not in st.session_state:
         return
 
     user = current_user()
-    if not user:
+if not user:
         logout()
         return
 
@@ -674,10 +674,10 @@ if "user_id" not in st.session_state:
         st.markdown(f"**{user['full_name']}**")
         st.markdown(f'<span class="pill">{user["role"].title()}</span>', unsafe_allow_html=True)
         st.write("")
-        if st.button("Log out", use_container_width=True):
+    if st.button("Log out", use_container_width=True):
             logout()
 
-        if user["role"] == "admin":
+    if user["role"] == "admin":
             page = st.radio("Navigate", ["Dashboard", "Manage users"])
         elif user["role"] == "teacher":
             page = st.radio(
@@ -693,7 +693,7 @@ if "user_id" not in st.session_state:
 
     header(user)
 
-    if user["role"] == "admin":
+if user["role"] == "admin":
         {"Dashboard": admin_dashboard, "Manage users": admin_manage_users}[page]()
     elif user["role"] == "teacher":
         actions = {
