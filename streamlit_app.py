@@ -99,7 +99,7 @@ html, body, [class*="css"] {
 
 
 def init_app():
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+    os.makedirs( exist_ok=True)
     for folder in ("assignments", "submissions", "recordings", "library", "avatars"):
         os.makedirs(os.path.join(UPLOAD_FOLDER, folder), exist_ok=True)
     # create_app() already calls create_all(), but this is harmless and protects
@@ -659,7 +659,7 @@ def student_live(user):
 
 
 def main():
-    init_app()
+    init_app
 
     if "user_id" not in st.session_state:
         render_login()
@@ -724,4 +724,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main
