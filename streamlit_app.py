@@ -658,7 +658,7 @@ def student_live(user):
             st.link_button("Join class", c.meeting_link)
 
 
-def main():
+def main(): main
     init_app
 
     if "user_id" not in st.session_state:
