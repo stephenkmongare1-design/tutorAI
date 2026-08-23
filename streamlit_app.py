@@ -97,11 +97,6 @@ html, body, [class*="css"] {
 </style>
 """, unsafe_allow_html=True)
 
-CATEGORIES = flask_app.config["CATEGORIES"]
-TIER_PRICES = flask_app.config["TIER_PRICES"]
-TIER_LABELS = flask_app.config["TIER_LABELS"]
-UPLOAD_FOLDER = flask_app.config["UPLOAD_FOLDER"]
-
 
 def init_app():
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
