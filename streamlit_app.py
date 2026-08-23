@@ -675,7 +675,7 @@ with st.sidebar:
         st.markdown(f'<span class="pill">{user["role"].title()}</span>', unsafe_allow_html=True)
         st.write("")
     if st.button("Log out", use_container_width=True):
-        logout()
+    logout()
 
     if user["role"] == "admin":
             page = st.radio("Navigate", ["Dashboard", "Manage users"])
